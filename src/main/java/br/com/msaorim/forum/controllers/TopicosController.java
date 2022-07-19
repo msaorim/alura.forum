@@ -28,4 +28,9 @@ public class TopicosController {
 	public List<TopicoDto> find() { 
 		return TopicoDto.toDto(topicoRepository.findAll());
 	}
+	
+	@GetMapping(value = "/curso")
+	public List<Topico> findByCurso(String nomeCurso){
+		return topicoRepository.findByCursoNome(nomeCurso);
+	}
 }

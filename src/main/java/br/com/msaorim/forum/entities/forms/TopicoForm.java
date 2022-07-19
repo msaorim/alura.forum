@@ -1,13 +1,19 @@
 package br.com.msaorim.forum.entities.forms;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import br.com.msaorim.forum.entities.Curso;
 import br.com.msaorim.forum.entities.Topico;
 import br.com.msaorim.forum.repositories.CursoRepository;
 
 public class TopicoForm {
 
+	@NotNull @NotEmpty
 	private String titulo;
+	@NotNull @NotEmpty
 	private String mensagem;
+	@NotNull @NotEmpty
 	private String nomeCurso;
 
 	public TopicoForm() {

@@ -8,4 +8,6 @@ import br.com.msaorim.forum.entities.Curso;
 @Repository
 public interface CursoRepository extends JpaRepository<Curso, Long> {
 
+	Curso findByNome(String nome);
+
 }
